@@ -1,0 +1,46 @@
+test_package: remove tox env folder /home/chafund/GIT/Houses-Price-Prediction_ML-model-deployment/production-model-package/.tox/test_package
+test_package: install_deps> pip install -r requirements/test_requirements.txt
+test_package: commands[0]> python regression_model/train_pipeline.py
+test_package: commands[1]> pytest -s -vv tests/
+============================= test session starts ==============================
+platform linux -- Python 3.9.13, pytest-6.2.5, py-1.11.0, pluggy-1.5.0 -- /home/chafund/GIT/Houses-Price-Prediction_ML-model-deployment/production-model-package/.tox/test_package/bin/python
+cachedir: .tox/test_package/.pytest_cache
+rootdir: /home/chafund/GIT/Houses-Price-Prediction_ML-model-deployment/production-model-package
+collecting ... collected 1 item
+
+tests/test_features.py::test_temporal_variable_transformer PASSED
+
+=============================== warnings summary ===============================
+.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py:10
+  /home/chafund/GIT/Houses-Price-Prediction_ML-model-deployment/production-model-package/.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py:10: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    _nlv = LooseVersion(_np_version)
+
+.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py:11
+  /home/chafund/GIT/Houses-Price-Prediction_ML-model-deployment/production-model-package/.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py:11: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    np_version_under1p17 = _nlv < LooseVersion("1.17")
+
+.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py:12
+  /home/chafund/GIT/Houses-Price-Prediction_ML-model-deployment/production-model-package/.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py:12: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    np_version_under1p18 = _nlv < LooseVersion("1.18")
+
+.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py:13
+  /home/chafund/GIT/Houses-Price-Prediction_ML-model-deployment/production-model-package/.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py:13: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    _np_version_under1p19 = _nlv < LooseVersion("1.19")
+
+.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py:14
+  /home/chafund/GIT/Houses-Price-Prediction_ML-model-deployment/production-model-package/.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/__init__.py:14: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    _np_version_under1p20 = _nlv < LooseVersion("1.20")
+
+.tox/test_package/lib/python3.9/site-packages/setuptools/_distutils/version.py:336
+  /home/chafund/GIT/Houses-Price-Prediction_ML-model-deployment/production-model-package/.tox/test_package/lib/python3.9/site-packages/setuptools/_distutils/version.py:336: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    other = LooseVersion(other)
+
+.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/function.py:120
+.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/function.py:120
+  /home/chafund/GIT/Houses-Price-Prediction_ML-model-deployment/production-model-package/.tox/test_package/lib/python3.9/site-packages/pandas/compat/numpy/function.py:120: DeprecationWarning: distutils Version classes are deprecated. Use packaging.version instead.
+    if LooseVersion(__version__) >= LooseVersion("1.17.0"):
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+======================== 1 passed, 8 warnings in 0.03s =========================
+  test_package: OK (25.34=setup[23.14]+cmd[1.19,1.00] seconds)
+  congratulations :) (25.53 seconds)
